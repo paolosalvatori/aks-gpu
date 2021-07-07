@@ -1,0 +1,19 @@
+nodeSelector:
+  accelerator: nvidia
+
+tolerations:
+- key: sku
+  operator: Equal
+  value: gpu
+  effect: NoSchedule
+
+service:
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "9400"
+    prometheus.io/path: 'metrics'
+
+image:
+  repository: YOUR-ACR-LOGIN-SERVER/dcgm-exporter
+  pullPolicy: Always
+  tag: latest
