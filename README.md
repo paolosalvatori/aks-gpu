@@ -330,10 +330,10 @@ fi
 
 ```yaml
 tolerations:
-	- key: "sku"
-		operator: "Equal"
-		value: "gpu"
-		effect: "NoSchedule"
+- key: "sku"
+  operator: "Equal"
+  value: "gpu"
+  effect: "NoSchedule"
 ```
 
 In case you deploy the GPU-enabled node pool using the standard VM
