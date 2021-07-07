@@ -56,7 +56,9 @@ clusters can scale in one of two ways:
     demand of pods. If an application needs more resources, the number
     of pods is automatically increased to meet the demand.
 
-<img src="media\image1.png" style="width:4.42569in;height:2.33333in" alt="The cluster autoscaler and horizontal pod autoscaler often work together to support the required application demands" />
+<p align="center">
+    <img src="media\image1.png" style="width:4.42569in;height:2.33333in" alt="The cluster autoscaler and horizontal pod autoscaler often work together to support the required application demands" />
+</p>
 
 Both the horizontal pod autoscaler and cluster autoscaler can also
 decrease the number of pods and nodes as needed. The cluster autoscaler
@@ -100,7 +102,9 @@ expose cluster-level metrics for Kubernetes API objects and node-level
 metrics such as CPU utilization. The figure below shows a sample
 architecture with Prometheus and Grafana.
 
-<img src="media\image2.png" style="width:5.90764in;height:3.53542in" alt="Image showing the various components of a Prometheus + Grafana architecture for gathering telemetry, including the server, Alertmanager, and UI components." />
+<p align="center">
+    <img src="media\image2.png" style="width:5.90764in;height:3.53542in" alt="Image showing the various components of a Prometheus + Grafana architecture for gathering telemetry, including the server, Alertmanager, and UI components." />
+</p>
 
 Kubernetes includes experimental support for managing [AMD and NVIDIA
 GPUs](https://kubernetes.io/docs/tasks/manage-gpus/scheduling-gpus/)
