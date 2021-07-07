@@ -135,7 +135,9 @@ server (/var/lib/kubelet/pod-resources) to identify the GPU devices
 running on a pod and appends the GPU devices pod information to the
 metrics collected.
 
-<img src="media\image3.png" style="width:5.57431in;height:3.56597in" alt="Image showing the architecture of dcgm-exporter for gathering telemetry with Prometheus with the node-exporter, dcgm-exporter components, and service monitor components." />
+<p align="center">
+    <img src="media\image3.png" style="width:5.57431in;height:3.56597in" alt="Image showing the architecture of dcgm-exporter for gathering telemetry with Prometheus with the node-exporter, dcgm-exporter components, and service monitor components." />
+</p>
 
 For more information on the NVIDIA Data Center GOU Manager, see [NVIDIA
 Data Center GPU Manager](https://github.com/NVIDIA/DCGM) GitHub repo.
@@ -543,24 +545,31 @@ under the Kubernetes documentation.
 
 Before starting the test, take note of the number of GPU nodes. In our
 case, the initial number of nodes was 1 and SKU was Standard\_NC6.
-
-<img src="media\image4.png" style="width:6.69306in;height:2.75764in" alt="A picture containing graphical user interface Description automatically generated" />
+<p align="center">
+    <img src="media\image4.png" style="width:6.69306in;height:2.75764in" alt="A picture containing graphical user interface Description automatically generated" />
+</p>
 
 Run the script with a large number such 20-50. If the current number of
 worker nodes and vCores is lower than this number, job pods will remain
 in a Pending state. In
 
-<img src="media\image5.png" style="width:6.69306in;height:2.75833in" alt="A picture containing text Description automatically generated" />
+<p align="center">
+    <img src="media\image5.png" style="width:6.69306in;height:2.75833in" alt="A picture containing text Description automatically generated" />
+</p>
 
 If you configured the GPU-enabled node pool for autoscaling, the
 autoscaler will increase the number of nodes
 
-<img src="media\image6.png" style="width:6.69306in;height:2.75764in" alt="A picture containing graphical user interface Description automatically generated" />
+<p align="center">
+    <img src="media\image6.png" style="width:6.69306in;height:2.75764in" alt="A picture containing graphical user interface Description automatically generated" />
+</p>
 
 You can use Prometheus UI to see the GPU utilization
 (DCGM\_FI\_DEV\_GPU\_UTIL metric) of individual job containers.
 
-<img src="media\image7.png" style="width:6.69306in;height:3.32917in" alt="Chart, box and whisker chart Description automatically generated" />
+<p align="center">
+    <img src="media\image7.png" style="width:6.69306in;height:3.32917in" alt="Chart, box and whisker chart Description automatically generated" />
+</p>
 
 The GPU metrics are also visible either in the [NVIDIA DCGME Exporter
 Grafana dashboard](https://grafana.com/grafana/dashboards/12239) or the
@@ -568,7 +577,9 @@ Prometheus dashboard as can be seen in the following screenshots showing
 GPU utilization, memory allocated as the application is running on the
 GPU:
 
-<img src="media\image8.png" style="width:6.69306in;height:4.95278in" alt="A picture containing text, indoor Description automatically generated" />
+<p align="center">
+    <img src="media\image8.png" style="width:6.69306in;height:4.95278in" alt="A picture containing text, indoor Description automatically generated" />
+</p>
 
 After jobs completed, and GOU nodes are no more used by any workloads,
 the number of GPU nodes will scale back to the minimum.
@@ -586,7 +597,6 @@ Container insights supports monitoring GPU clusters from following GPU
 vendors:
 
 -   [NVIDIA](https://developer.nvidia.com/kubernetes-gpu)
-
 -   [AMD](https://github.com/RadeonOpenCompute/k8s-device-plugin)
 
 Container insights automatically starts monitoring GPU usage on nodes,
@@ -619,11 +629,10 @@ InsightsMetrics
 
 Returns the following time chart of the percentage of time over the past
 sample period during which GPU was busy/actively processing for a
-container. Duty cycle is a number between 1 and 100.
-
-<img src="media\image9.png" style="width:6.69306in;height:2.61875in" alt="Graphical user interface, chart, line chart Description automatically generated" />
-
-              
+conta
+<p align="center">
+    <img src="media\image9.png" style="width:6.69306in;height:2.61875in" alt="Graphical user interface, chart, line chart Description automatically generated" />
+</p>              
 
 For more information, see [Configure GPU monitoring with Container
 insights](https://docs.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-gpu-monitoring).
